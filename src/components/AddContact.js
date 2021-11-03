@@ -14,6 +14,7 @@ class AddContact extends Component {
         console.log(this.state);
         this.props.contactHandler(this.state);
         this.setState({ name: "", Email: "" });
+        this.props.history.push("/");
     }
 
     render() {
@@ -32,6 +33,7 @@ class AddContact extends Component {
                         <label >Mail</label>
                         <input value={this.state.Email} onChange={(e) => this.setState({ Email: e.target.value })} type="text" name="mail" placeholder="mail" />
                     </div>
+                     
                     <button className="ui button blue">Add</button>
                 </form>
 
